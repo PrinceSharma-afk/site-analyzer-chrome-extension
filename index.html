@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SiteLens</title>
+
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -30,8 +33,11 @@
         <div id="overview">
 
             <section class="site-info">
+
                 <h2 id="site-name">Loading...</h2>
+
                 <p id="site-url">Loading...</p>
+
             </section>
 
 
@@ -43,8 +49,11 @@
                 </h3>
 
                 <div class="info-row">
+
                     <span>Title</span>
+
                     <span id="page-title">-</span>
+
                 </div>
 
             </section>
@@ -52,28 +61,55 @@
 
             <section class="stats">
 
-                <div class="stat-card">
+                <!-- Links -->
+
+                <div class="stat-card" id="links-card">
+
                     <span class="stat-icon">🔗</span>
+
                     <strong id="link-count">0</strong>
+
                     <span>Links</span>
+
                 </div>
 
-                <div class="stat-card">
+
+                <!-- Images -->
+
+                <div class="stat-card" id="images-card">
+
                     <span class="stat-icon">🖼️</span>
+
                     <strong id="image-count">0</strong>
+
                     <span>Images</span>
+
                 </div>
+
+
+                <!-- Headings -->
 
                 <div class="stat-card" id="headings-card">
+
                     <span class="stat-icon">H</span>
+
                     <strong id="heading-count">0</strong>
+
                     <span>Headings</span>
+
                 </div>
 
-                <div class="stat-card">
+
+                <!-- Forms -->
+
+                <div class="stat-card" id="forms-card">
+
                     <span class="stat-icon">📝</span>
+
                     <strong id="form-count">0</strong>
+
                     <span>Forms</span>
+
                 </div>
 
             </section>
@@ -86,11 +122,65 @@
         <section id="headings-view">
 
             <div class="view-header">
+
                 <button id="back-button">←</button>
+
                 <h2>Headings</h2>
+
             </div>
 
             <div id="heading-list"></div>
+
+        </section>
+
+
+        <!-- Images view -->
+
+        <section id="images-view">
+
+            <div class="view-header">
+
+                <button id="back-button-img">←</button>
+
+                <h2>Images</h2>
+
+            </div>
+
+            <div id="images-list"></div>
+
+        </section>
+
+
+        <!-- Links view -->
+
+        <section id="links-view">
+
+            <div class="view-header">
+
+                <button id="back-button-link">←</button>
+
+                <h2>Links</h2>
+
+            </div>
+
+            <div id="link-list"></div>
+
+        </section>
+
+
+        <!-- Forms view -->
+
+        <section id="forms-view">
+
+            <div class="view-header">
+
+                <button id="back-button-form">←</button>
+
+                <h2>Forms</h2>
+
+            </div>
+
+            <div id="form-list"></div>
 
         </section>
 
@@ -98,7 +188,9 @@
 
 
     <footer>
+
         <button id="ai">AI analysis</button>
+
     </footer>
 
 </div>
@@ -107,4 +199,5 @@
 <script src="index.js"></script>
 
 </body>
+
 </html>
