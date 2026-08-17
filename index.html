@@ -15,10 +15,7 @@
 
         <div class="logo">
             <span class="logo-icon">🔍</span>
-
-            <div>
-                <h1>SiteLens</h1>
-            </div>
+            <h1>SiteLens</h1>
         </div>
 
         <span class="status">● ACTIVE</span>
@@ -28,59 +25,72 @@
 
     <main>
 
-        <!-- Website -->
-        <section class="site-info">
+        <!-- Overview -->
+
+        <div id="overview">
+
+            <section class="site-info">
+                <h2 id="site-name">Loading...</h2>
+                <p id="site-url">Loading...</p>
+            </section>
 
 
-            <h2 id="site-name">Loading...</h2>
+            <section class="card">
 
-            <p id="site-url">Loading...</p>
+                <h3>
+                    <span>📜</span>
+                    Page Information
+                </h3>
 
-        </section>
+                <div class="info-row">
+                    <span>Title</span>
+                    <span id="page-title">-</span>
+                </div>
+
+            </section>
 
 
-        <!-- Page information -->
-        <section class="card">
+            <section class="stats">
 
-            <h3>
-                <span>📜</span>
-                Page Information
-            </h3>
+                <div class="stat-card">
+                    <span class="stat-icon">🔗</span>
+                    <strong id="link-count">0</strong>
+                    <span>Links</span>
+                </div>
 
-            <div class="info-row">
-                <span>Title</span>
-                <span id="page-title">-</span>
+                <div class="stat-card">
+                    <span class="stat-icon">🖼️</span>
+                    <strong id="image-count">0</strong>
+                    <span>Images</span>
+                </div>
+
+                <div class="stat-card" id="headings-card">
+                    <span class="stat-icon">H</span>
+                    <strong id="heading-count">0</strong>
+                    <span>Headings</span>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-icon">📝</span>
+                    <strong id="form-count">0</strong>
+                    <span>Forms</span>
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- Headings view -->
+
+        <section id="headings-view">
+
+            <div class="view-header">
+                <button id="back-button">←</button>
+                <h2>Headings</h2>
             </div>
 
-        </section>
-
-
-        <!-- Statistics -->
-        <section class="stats">
-
-            <div class="stat-card">
-                <span class="stat-icon">🔗</span>
-                <strong id="link-count">0</strong>
-                <span>Links</span>
-            </div>
-
-            <div class="stat-card">
-                <span class="stat-icon">🖼️</span>
-                <strong id="image-count">0</strong>
-                <span>Images</span>
-            </div>
-
-            <div class="stat-card">
-                <span class="stat-icon">H</span>
-                <strong id="heading-count">0</strong>
-                <span>Headings</span>
-            </div>
-
-            <div class="stat-card">
-                <span class="stat-icon">📝</span>
-                <strong id="form-count">0</strong>
-                <span>Forms</span>
-            </div>
+            <div id="heading-list"></div>
 
         </section>
 
@@ -88,10 +98,11 @@
 
 
     <footer>
-        <button>AI analysis</button>
+        <button id="ai">AI analysis</button>
     </footer>
 
 </div>
+
 
 <script src="index.js"></script>
 
