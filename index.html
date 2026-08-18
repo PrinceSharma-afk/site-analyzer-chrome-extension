@@ -1,203 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SiteAnalyzer</title>
 
-    <title>SiteLens</title>
-
-    <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+  <div id="wrapper">
 
-<div id="wrapper">
-
+    <!-- Header -->
     <header class="header">
+      <div class="logo">
+        <span class="logo-icon">🔍</span>
+        <h1>SiteAnalyzer</h1>
+      </div>
 
-        <div class="logo">
-            <span class="logo-icon">🔍</span>
-            <h1>SiteLens</h1>
-        </div>
-
-        <span class="status">● ACTIVE</span>
-
+      <span class="status">● ACTIVE</span>
     </header>
-
 
     <main>
 
-        <!-- Overview -->
+      <!-- Overview -->
+      <div id="overview">
 
-        <div id="overview">
+        <!-- Site information -->
+        <section class="site-info">
+          <h2 id="site-name">Loading...</h2>
+          <p id="site-url">Loading...</p>
+        </section>
 
-            <section class="site-info">
+        <!-- Page information -->
+        <section class="card">
+          <h3>
+            <span>📜</span>
+            Page Information
+          </h3>
 
-                <h2 id="site-name">Loading...</h2>
+          <div class="info-row">
+            <span>Title</span>
+            <span id="page-title">-</span>
+          </div>
+        </section>
 
-                <p id="site-url">Loading...</p>
+        <!-- Statistics -->
+        <section class="stats">
 
-            </section>
+          <div class="stat-card" id="links-card">
+            <span class="stat-icon">🔗</span>
+            <strong id="link-count">0</strong>
+            <span>Links</span>
+          </div>
 
+          <div class="stat-card" id="images-card">
+            <span class="stat-icon">🖼️</span>
+            <strong id="image-count">0</strong>
+            <span>Images</span>
+          </div>
 
-            <section class="card">
+          <div class="stat-card" id="headings-card">
+            <span class="stat-icon">H</span>
+            <strong id="heading-count">0</strong>
+            <span>Headings</span>
+          </div>
 
-                <h3>
-                    <span>📜</span>
-                    Page Information
-                </h3>
+          <div class="stat-card" id="forms-card">
+            <span class="stat-icon">📝</span>
+            <strong id="form-count">0</strong>
+            <span>Forms</span>
+          </div>
 
-                <div class="info-row">
+        </section>
 
-                    <span>Title</span>
+      </div>
 
-                    <span id="page-title">-</span>
+      <!-- Headings view -->
+      <section id="headings-view">
+        <div class="view-header">
+          <button id="back-button" class="back-button">←</button>
+          <h2>Headings</h2>
+        </div>
 
-                </div>
+        <div id="heading-list"></div>
+      </section>
 
-            </section>
+      <!-- Images view -->
+      <section id="images-view">
+        <div class="view-header">
+          <button id="back-button-img" class="back-button">←</button>
+          <h2>Images</h2>
+        </div>
 
+        <div id="images-list"></div>
+      </section>
 
-            <section class="stats">
+      <!-- Links view -->
+      <section id="links-view">
+        <div class="view-header">
+          <button id="back-button-link" class="back-button">←</button>
+          <h2>Links</h2>
+        </div>
 
-                <!-- Links -->
+        <div id="link-list"></div>
+      </section>
 
-                <div class="stat-card" id="links-card">
+      <!-- Forms view -->
+      <section id="forms-view">
+        <div class="view-header">
+          <button id="back-button-form" class="back-button">←</button>
+          <h2>Forms</h2>
+        </div>
 
-                    <span class="stat-icon">🔗</span>
+        <div id="form-list"></div>
+      </section>
 
-                    <strong id="link-count">0</strong>
+      <!-- AI Analysis view -->
+      <section id="ai-view">
 
-                    <span>Links</span>
+        <div class="view-header">
+          <button id="back-button-ai" class="back-button">←</button>
+          <h2>AI Analysis</h2>
+        </div>
 
-                </div>
+        <!-- Loading state -->
+        <div id="ai-loading">
+          <div class="ai-loading-title">Analyzing page...</div>
+          <div class="ai-loading-text">SiteAnalyzer is reviewing the page structure.</div>
+        </div>
 
+        <!-- Analysis result -->
+        <div id="ai-result">
 
-                <!-- Images -->
+          <section class="ai-section">
+            <h3>Overview</h3>
+            <p id="ai-overview"></p>
+          </section>
 
-                <div class="stat-card" id="images-card">
+          <section class="ai-section">
+            <h3>Page Structure</h3>
+            <p id="ai-structure"></p>
+          </section>
 
-                    <span class="stat-icon">🖼️</span>
+          <section class="ai-section">
+            <h3>Accessibility</h3>
+            <p id="ai-accessibility"></p>
+          </section>
 
-                    <strong id="image-count">0</strong>
+          <section class="ai-section">
+            <h3>Potential Issues</h3>
+            <p id="ai-issues"></p>
+          </section>
 
-                    <span>Images</span>
-
-                </div>
-
-
-                <!-- Headings -->
-
-                <div class="stat-card" id="headings-card">
-
-                    <span class="stat-icon">H</span>
-
-                    <strong id="heading-count">0</strong>
-
-                    <span>Headings</span>
-
-                </div>
-
-
-                <!-- Forms -->
-
-                <div class="stat-card" id="forms-card">
-
-                    <span class="stat-icon">📝</span>
-
-                    <strong id="form-count">0</strong>
-
-                    <span>Forms</span>
-
-                </div>
-
-            </section>
+          <section class="ai-section">
+            <h3>Suggestions</h3>
+            <p id="ai-suggestions"></p>
+          </section>
 
         </div>
 
+        <!-- AI error -->
+        <div id="ai-error">
+          Unable to analyze this page.
+        </div>
 
-        <!-- Headings view -->
-
-        <section id="headings-view">
-
-            <div class="view-header">
-
-                <button id="back-button">←</button>
-
-                <h2>Headings</h2>
-
-            </div>
-
-            <div id="heading-list"></div>
-
-        </section>
-
-
-        <!-- Images view -->
-
-        <section id="images-view">
-
-            <div class="view-header">
-
-                <button id="back-button-img">←</button>
-
-                <h2>Images</h2>
-
-            </div>
-
-            <div id="images-list"></div>
-
-        </section>
-
-
-        <!-- Links view -->
-
-        <section id="links-view">
-
-            <div class="view-header">
-
-                <button id="back-button-link">←</button>
-
-                <h2>Links</h2>
-
-            </div>
-
-            <div id="link-list"></div>
-
-        </section>
-
-
-        <!-- Forms view -->
-
-        <section id="forms-view">
-
-            <div class="view-header">
-
-                <button id="back-button-form">←</button>
-
-                <h2>Forms</h2>
-
-            </div>
-
-            <div id="form-list"></div>
-
-        </section>
+      </section>
 
     </main>
 
-
+    <!-- Footer -->
     <footer>
+      <span id="interaction-hint">Click to copy • Double-click to scroll</span>
 
-        <button id="ai">AI analysis</button>
-
+      <button id="ai">Analyze with AI</button>
     </footer>
 
-</div>
+  </div>
 
-
-<script src="index.js"></script>
-
+  <script src="index.js"></script>
 </body>
 
 </html>
