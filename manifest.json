@@ -1,6 +1,6 @@
 {
     "manifest_version": 3,
-    "name": "SiteLens",
+    "name": "SiteAnalyzer",
     "version": "1.0.0",
     "description": "A simple website information analyzer.",
     "action": {
